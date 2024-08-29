@@ -1,0 +1,142 @@
+body{
+  background-color: cyan;
+}
+.container {
+  text-align: center;
+  margin: 0 auto;
+  width: 400px;
+ 
+}
+
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 50px;
+  margin: 10px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(50, 133, 211);
+  color: white;
+  text-align: center;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+.concluida>.tarefaText {
+  color: green;
+  text-decoration: line-through;
+  
+  
+  /* TODO: Strike throu ao clicar concluir */
+}
+
+.concluir {
+  color: green;
+  text-decoration: line-through;
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 30px;
+}
+
+input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+li:hover {
+  opacity: '1px';
+}
+
+button:hover {
+  size: 10%;
+}
+li:hover > button{
+  background-color: rgb(216, 227, 235);
+}
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+ul li:nth-child(odd) > button{
+  background: #f9f9f9;
+}
+
+ul li:nth-child(odd):hover > button{
+  background: #d1d1d1;
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px;
+  align-items: center;
+  background-color: aliceblue;
+  display: flex;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  justify-content: space-evenly;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: aliceblue;
+  color: white;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding-left: 10%;
+
+}
+
+.add-icon {
+  margin-left: 40px;
+  cursor: pointer;
+  border-radius: 40px;
+  height: 55px;
+  width: 55px;
+  padding: 15px;
+  background: limegreen;
+}
