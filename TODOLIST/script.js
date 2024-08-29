@@ -41,7 +41,7 @@ function criarTarefa(texto, concluida = false) {//Por default vem falso
   };
 
   const botaoRemover = document.createElement('button');
-  botaoRemover.style.backgroundColor='red';
+  botaoRemover.style.backgroundColor='#F67280';
   botaoRemover.textContent = '❌';
   botaoRemover.style.borderRadius='10px';
   
