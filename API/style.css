@@ -1,0 +1,25 @@
+.container{
+    height: 260.312px;
+    width: 250px;
+    background-color: rgb(235, 192, 137);
+    border-radius: 30%;
+    padding: 30px;
+}
+.titulo{
+    margin: 10px;
+}
+.mid-content{
+    display: flex;
+    margin: 10px;
+}
+.temp{
+     float: left;
+     margin: 10px;
+}
+h1, p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+}
+p{
+    font-style: italic;
+}

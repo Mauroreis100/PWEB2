@@ -5,30 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Today</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <button onclick="getWeather()">Clique para ver a temperatura</button>
+
 <body>
   <!-- Uso de APIs -->
   <!-- Como usar fetch e termos o componente visual da google com as datas -->
 
-  <div id="container">
+  <div class="container">
     <div class="titulo">
       <h1 id="pais"></h1>
     </div>
     <div class="mid-content">
-<div class="icon">
-<img id="icone" src="" alt="">
-</div>
-<div class="temp">
-<h1 id="temperatura">
+      <div class="icon">
+        <img id="icone" src="" alt="">
+      </div>
+      <div class="temp">
+        <h1 id="temperatura">
 
-</h1>
-</div>
+        </h1>
+      </div>
     </div>
     <div class="footer-notes">
-<p id="description">
+      <p id="description">
 
-</p>
+      </p>
+      <p id="date">
+      </p>
     </div>
   </div>
 
@@ -43,20 +47,26 @@
         }
         const json = await response.json();
         console.log(json);
-        const pais=document.getElementById('pais');
-        pais.textContent=json.name;
+        const pais = document.getElementById('pais');
+        pais.textContent = json.name;
 
-        const icone=document.getElementById('icone');
-        const iconCode=json.weather[0].icon
+        const icone = document.getElementById('icone');
+        const iconCode = json.weather[0].icon
 
-        icone.setAttribute("src",`https://openweathermap.org/img/wn/${iconCode}@2x.png`)
+        icone.setAttribute("src", `https://openweathermap.org/img/wn/${iconCode}@2x.png`)
 
 
-        const temp=document.getElementById('temperatura');
-        temp.textContent=(json.main.temp)/10;
+        const temp = document.getElementById('temperatura');
+        temp.textContent = parseInt((json.main.temp) / 10);
+        temp.textContent=temp.textContent+" ºC"
 
-      const rodape=document.getElementById('description');
-      rodape.textContent=json.weather[0].description;
+        const rodape = document.getElementById('description');
+        rodape.textContent = json.weather[0].description;
+
+
+        const date=new Date();
+        const hoje = document.getElementById('date');
+        hoje.textContent = date.toDateString();
 
 
       } catch (error) {
