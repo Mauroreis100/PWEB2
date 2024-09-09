@@ -39,7 +39,7 @@
 
   <script>
     async function getWeather() {
-      const url = "https://api.openweathermap.org/data/2.5/weather?lat=-25.96553&lon=32.58322&appid=29f0df71a0de3ee8ecbd1c6cf077ede5";
+      const url = "https://api.openweathermap.org/data/2.5/weather?q=maputo&appid=29f0df71a0de3ee8ecbd1c6cf077ede5";
       try {
         const response = await fetch(url);
         if (!response.ok) {
